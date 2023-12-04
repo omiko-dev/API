@@ -73,6 +73,9 @@ namespace API.Migrations
                     b.Property<int>("likeCount")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("publishDate")
+                        .HasColumnType("datetime2");
+
                     b.HasKey("ArticleId");
 
                     b.HasIndex("UserId");

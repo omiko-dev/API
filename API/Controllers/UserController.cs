@@ -19,7 +19,7 @@ namespace API.Controllers
 
         public IUserRepository Repository { get; }
 
-        [HttpPost]
+        [HttpPost("publish")]
         public async Task<IActionResult> publishArticle([FromBody] Article article)
         {
             var email = User.FindFirstValue(ClaimTypes.Email)!;

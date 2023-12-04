@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Migrations
 {
     [DbContext(typeof(UserDbContext))]
-    [Migration("20231204014657_onetoone4")]
-    partial class onetoone4
+    [Migration("20231204060838_updateArticles2")]
+    partial class updateArticles2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -75,6 +75,9 @@ namespace API.Migrations
 
                     b.Property<int>("likeCount")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("publishDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("ArticleId");
 
